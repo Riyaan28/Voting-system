@@ -1,0 +1,193 @@
+*{margin: 0;
+  padding: 0;}
+
+body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Your Preferred Font', sans-serif; 
+}
+
+#background-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 0;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  animation: fadeIn 2s ease-in-out; 
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+#box{
+background-color: rgb(255, 255, 255);
+height: 450px;
+width: 350px;
+position: relative;
+top: 50px;
+left: 600px;
+opacity: 0.8;
+border: 3px solid black;
+border-radius: 25px;
+box-shadow: 5px 5px 5px rgb(170, 62, 30);
+
+display: flex;
+flex-direction: column;
+
+}
+
+.signin{position: relative;
+display: inline-block;
+top: 50px;
+margin: 15px;
+
+
+}
+
+.inp{height: 33px;
+width: 300px;
+border-radius: 5px;
+box-shadow: 5px 5px 5px rgb(87, 101, 14);
+
+}
+
+
+#btni{position: fixed;
+  top: 412px;
+width: 100px;
+background-color: rgb(157, 157, 151);
+border-radius: 10px;
+}
+
+#btno:hover{background-color: rgb(209, 209, 47);
+width: 110px;
+height:35px ;
+font-size: 20px;
+
+}
+
+.ip2{
+color: red;
+font-size: 25px;
+font: bold;
+
+}
+#lg{color: red;
+position: relative;
+left: 110px;
+top: 20px;
+
+}
+
+#btno{background-color: none;
+position: fixed;
+top: 400px;
+left: 800px;
+height:30px ;
+width: 100px;
+border-radius: 10px;
+}
+
+#inp78{
+color: red;
+}
+#lk{
+color: red;
+position: fixed;
+top: 470px;
+left: 870px;
+font-size: 15px;}
+
+
+@media only screen and (max-height: 950px) and (max-width: 450px) {
+  #box{ border: 3px solid red;
+  left: 42.5px;
+  width: 290px;
+
+}
+#lg{position: fixed;
+top: 70px;
+left: 120px;}
+
+
+#lab1{position: fixed;
+top: 180px;
+left: 60px;}
+
+#lab2{position: fixed;
+top: 300px;
+left: 60px;}
+
+#inp26{position: fixed;
+left: 58px;
+top: 200px;}
+  
+#inp16{position: fixed;
+left: 58px;
+top: 320px;}
+
+#btni{position: fixed;
+top: 420px;
+left: 75px;}
+
+#btno{position: fixed;
+top: 405px;
+left: 185px;}
+
+#btno:hover{background-color: aqua;
+width: 110px;
+height:35px ;
+font-size: 20px;
+
+}
+#lk{position: fixed;
+top: 465px;
+left: 160px;}
+}
+
+
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -1;
+}
+
+
+#box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out; /* Added animation for fade-in effect */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+
+

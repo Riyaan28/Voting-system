@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System Sign-up</title>
+    <link rel="shortcut icon" type="x-icon" href="favicon.png">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <video autoplay loop muted>
+    <source src="videoplayback.webm" type="video/mp4">
+
+  </video>
+
+    <div id="box">
+        <div><h1 id="lg"><b>SIGN UP</b></h1></div>
+        <!-- <div class="signin" ><label class="ip2" >Phone no</label><input class="inp" type="number" ></div> -->
+        <div class="signin" ><b><label class="ip2" id="lab1" >Email:</label></b><input  class="inp" id="inp26" placeholder=" Enter Your Email Here"></div>
+        <div class="signin" ><b><label class="ip2" id="lab2">Password:</label></b><input type= "password" id="inp16" class="inp" placeholder=" Enter Your password Here"></div>
+        <div class="signin"><button class="inp" id="btni">Sign In</button></div>
+        <div><button class="signin" id="btno">Sign Up</button></div>
+        <div><a href="login.html" id="lk">Login</a></div>
+</div>
+
+
+
+
+
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    // import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js" ;
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/  setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAw623UtNeUyn0pbz9zMt-CT-pEMz51ItY",
+      authDomain: "decentralised-voting-sys-9b874.firebaseapp.com",
+      projectId: "decentralised-voting-sys-9b874",
+      storageBucket: "decentralised-voting-sys-9b874.appspot.com",
+      messagingSenderId: "559310681711",
+      appId: "1:559310681711:web:3bf5782206c60fd9edff9a",
+      measurementId: "G-FD31MKN6SZ"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    const auth = getAuth();
+    const user = auth.currentUser;
+
+    let x=document.getElementById("btno")
+
+    x.addEventListener("click", ()=>{
+    let email=document.getElementById("inp26").value
+    let password=document.getElementById("inp16").value
+createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    const user = userCredential.user;
+    alert("User Created: click Here for Home Page")
+    window.open("https://www.google.com/")
+    
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(errorMessage)
+    
+  });
+    })
+
+  </script>
+</html>

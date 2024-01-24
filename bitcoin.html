@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BITCOIN</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: -1;
+        }
+
+        .text-container1 {
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            position: fixed;
+            top: 150px;
+        }
+
+        .text-container2 {
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            position: fixed ;
+            top: 400px;
+            border: 2px solid rgb(255, 255, 255);
+            box-shadow:2px 2px 2px white ;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: moveUp 2s ease-in-out;
+            text-shadow: 3px 3px 3px lightsalmon;
+        }
+
+        p {
+            font-size: 1.5em;
+            opacity: 0;
+            animation: fadeInAndMoveDown 2s ease-in-out forwards;
+        }
+
+        img {
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out 1s forwards;
+            height: 100px;
+            width: 100px;
+            position: fixed;
+            top: 120px;
+            right: 900px
+        }
+
+        @keyframes fadeInAndMoveDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes moveUp {
+            0% {
+                transform: translateY(50%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+
+        button {
+            margin-top: auto; /* Push the button to the bottom of the container */
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            position: fixed ;
+            right: 4px;
+            bottom: 4px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <video autoplay loop muted>
+        <source src="World Digital Background Loop.mp4" type="video/mp4">
+    
+    </video>
+
+    <div class="text-container1">
+        <img src="bitcoinsymbol.png">
+        <h1>BITCOIN</h1>
+        <p>Bitcoin is the first decentralized cryptocurrency. Nodes in the peer-to-peer bitcoin network verify transactions through cryptography and 
+            record them in a public distributed ledger, called a blockchain, without central oversight.
+
+            Consensus between nodes is achieved using a computationally intensive system based on proof-of-work called mining.
+             Bitcoin mining requires increasing quantities of electricity and was responsible for 0.2% of world greenhouse gas emissions as of 2022.</p>
+        
+    </div>
+    <div class="text-container2">
+        <p>Based on a free market ideology, bitcoin was invented in 2008 by Satoshi Nakamoto, an unknown person. Use of bitcoin as a currency began in 2009,
+             with the release of its open-source implementation.In 2021, El Salvador adopted it as legal tender.
+             Bitcoin is currently used more as a store of value and less as a medium of exchange or unit of account.</p>
+    </div>
+    <a href="chain.html"><button>Return</button></a>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPLOAD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #000000;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: -1;
+        }
+        h1{
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted>
+        <source src="hacking.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <h1>DATA OF YOUR PREFERED CRYPTO</h1>
+        <input type="file" id="imageInput" accept="image/*">
+        <br>
+        <input type="text" id="nameInput" placeholder="Enter Image Name">
+        <br>
+        <button onclick="uploadImage()">Upload Image</button>
+    </div>
+
+    <script>
+        function uploadImage() {
+            const input = document.getElementById("imageInput");
+            const nameInput = document.getElementById("nameInput");
+            const file = input.files[0];
+
+            if (file && nameInput.value) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imageDataURL = e.target.result;
+
+                    sessionStorage.setItem("uploadedImage", imageDataURL);
+                    sessionStorage.setItem("imageName", nameInput.value);
+
+                    window.location.href = "chain.html";
+                };
+                reader.readAsDataURL(file);
+            } else {
+                alert("Please select an image and provide a name.");
+            }
+        }
+    </script>
+
+</body>
+</html>

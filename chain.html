@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="chain.css">
+
+</head>
+<body>
+  <video id="backgroundVideo" autoplay loop muted>
+    <source src="chainvideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<h1 id="head"> DECENTRALIZED VOTING SYSTEM</h1>
+<div id="counting">
+  <h1 id="ch">COUNT IS</h1><h1 id="cn">0 Vote</h1>
+</div>
+
+
+  <div class="flex-container" id="flexContainer">
+    <div class="flex-item" id="box1">
+        <img src="bitcoinsymbol.png" alt="error">
+       
+    </div>
+    <div class="flex-item " id="box2">
+        <img src="dogesymbol.png" alt="error">
+    </div>
+    <div class="flex-item " id="box3">
+        <img src="ethsymbol.png" alt="error">
+    </div>
+    <div class="flex-item " id="box4">
+        <img src="tethersymbol.png" alt="error">
+    </div>
+    <div class="flex-item" id="box5">
+      <div id="imageBox"></div>
+  </div>
+  </div>
+ <div class="mbitch">
+  <button onclick="goToPageTwo()" id="addbutton">+</button>
+ </div>
+
+
+  <div><b><a href="bitcoin.html"id="v1">Bitcoin</a></div></b>
+  <div><b><a href="doge.html" id="v2">Dogecoin</a></div></b>
+  <div><b><a href="Eth.html" id="v3">Ethereum</a></div></b>
+  <div><b><a href="tether.html" id="v4">Tether</a></div></b>
+
+
+
+ <button class="vot" id="vot1" onclick="htk1()">vote</button>
+ <button class="vot" id="vot2" onclick="htk2()">vote</button>
+ <button class="vot" id="vot3" onclick="htk3()">vote</button>
+ <button class="vot" id="vot4" onclick="htk4()">vote</button>
+ <button class="vot" id="vot5" onclick="htk5()">vote</button>
+
+<script src="chain.js"></script>
+</body>
+</html>

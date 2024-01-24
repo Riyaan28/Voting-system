@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOGECOIN</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #000;
+            color: #000000;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+        }
+
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: -1;
+        }
+
+        .text-container1 {
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            margin-bottom: 50px;
+            position: fixed;
+            top: 175px;
+    
+        }
+
+        .text-container2 {
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            margin-bottom: 50px;
+            position: fixed;
+            top:450px;
+            border: 3px solid #000000;
+            
+    
+        }
+
+
+
+        img {
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out 1s forwards;
+            height: 100px;
+            width: 100px;
+            position: fixed;
+            top: 70px;
+            right: 900px
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            animation: moveUp 2s ease-in-out;
+            text-shadow: 2px 2px 2px brown;
+            position: fixed;
+            top: 100px;
+            right: 630px;
+        }
+
+        p {
+            font-size: 1.5em;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeInAndMoveDown 2s ease-in-out forwards;
+            text-shadow: 2px 2px 2px white;
+        }
+
+        button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            opacity: 0;
+            animation: fadeInButton 2s ease-in-out 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInAndMoveDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes moveUp {
+            0% {
+                transform: translateY(50%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInButton {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay loop muted>
+        <source src="doge.mp4" type="video/mp4">
+    </video>
+
+    <div class="text-container1">
+        <img src="dogesymbol.png">
+        <h1>DOGECOIN</h1>
+        <p><b>Dogecoin is a cryptocurrency created by software engineers Billy Markus and Jackson Palmer, who decided to create a payment system as a "joke", making fun of the wild speculation in cryptocurrencies at the time.
+         It is considered both the first "meme coin", and more specifically the first "dog coin". Despite its satirical nature, some consider it a legitimate investment prospect. Dogecoin features the face of the Shiba Inu dog 
+         from the "doge" meme as its logo and namesake. It was introduced on December 6, 2013, and quickly developed its own online community, reaching a peak market capitalization of over US$85 billion on May 5, 2021. As of 2021,
+          it is the sleeve sponsor of Watford Football Club.</p>
+        </div><div class="text-container2"><p>On December 19, 2013, Dogecoin jumped nearly 300% in value in 72 hours, rising from $0.00026 to $0.00095, with a volume of billions of Dogecoins traded per day. This growth occurred during a time when Bitcoin and 
+            many other cryptocurrencies were reeling from China's decision to forbid Chinese banks from investing in the Bitcoin economy.</p>
+        </b></div>
+
+        <a href="chain.html"><button>Return</button></a>
+
+</body>
+</html>
